@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <title>TodoList</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title title-h1">To<span class="title title-h2">Do<span class="title title-h3">List</span></span></h1>
+    </header>
+    <div class="container-todo">
+        <div class="container-list">
+            <div class="title-list">
+                <h2>ToDo</h2>
+            </div>
+        </div>
+        
+        <form class="create-activity">
+            <div class="form-div-1">
+                <label class="form-activity">New Activity</label>
+                <input class="form-input" type="text" placeholder="Activity">
+            </div>
+            <div class="form-div-1">
+                <label class="form-activity">Days for complete this task</label>
+                <input type="datetime-local" class="form-input form-date" type="text" placeholder="Activity">
+            </div>
+           <div>
+               <label class="form-activity">Select your type of activity</label>
+               <select class="select-type-activity">
+                   <option value="others">Others</option>
+                   <option value="study">Study</option>
+                    <option value="trainnig">Training</option>
+                </select>
+        </div> 
+            <button class="submit-list" type="submit">Send Activity</button>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/a46dbde673.js" crossorigin="anonymous"></script>
+    <script src='app.js'></script>
+    
+</body>
+</html>

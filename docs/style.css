@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    197deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 50%
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Redressed", cursive;
+  height: 150vh;
+  width: 100%;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.title-h1 {
+  color: rgb(0, 0, 0);
+}
+.title-h2 {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+}
+.title-h3 {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+}
+.container-todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-list {
+  display: block;
+  /* background-color: rgba(255, 255, 255, 0.74); */
+  margin: 5px;
+  width: 70%;
+  height: 450px;
+}
+.container-activity {
+  display: flex;
+  position: relative;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 100px;
+  margin: 10px 0;
+  border: solid black 2px;
+}
+.create-activity {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 450px;
+  width: 30%;
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.671);
+}
+input {
+  position: relative;
+  top: -5px;
+
+  height: 30px;
+}
+select {
+  height: 30px;
+}
+button {
+  position: relative;
+  margin: 0 0 25px 0;
+  width: 150px;
+  height: 39px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 20px;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.title-list {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  font-size: 25px;
+  padding: 0 30px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+.title-name-activity {
+  margin: 5px;
+  display: block;
+  width: 70%;
+}
+.name-activity {
+  font-size: 55px;
+  padding-left: 50px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.609);
+}
+.icons-activity {
+  display: flex;
+  font-size: 40px;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2px;
+  width: 30%;
+  height: 53px;
+}
+.icons-activity span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 53px;
+  padding: 10 8px;
+  background-color: #000000;
+  margin: 2px 0;
+  cursor: pointer;
+  transition: 1s;
+}
+.icons-activity .deleted-activity:hover {
+  color: rgb(209, 0, 0);
+  background-color: #0000008e;
+  transition: 1s;
+}
+.icons-activity .check-activity:hover {
+  color: rgb(9, 255, 0);
+  background-color: #0000008e;
+  transition: 1s;
+}
+.deleted-animation {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+.deleted-animation-alert {
+  animation-name: alert;
+  animation-duration: 4s;
+}
+.deleted {
+  display: none;
+}
+.cheack-v {
+  opacity: 0.5;
+  font-style: italic;
+  text-decoration: line-through;
+  color: #0000008e;
+}
+
+.others {
+  background-image: url(otthers.jpg);
+  background-size: 200px;
+}
+.trainnig {
+  background-size: 350px;
+  background-image: url(training.jpg);
+}
+.study {
+  background-size: 200px;
+  background-image: url(study.jpg);
+}
+.color-v:hover {
+  color: rgb(9, 255, 0);
+}
+.timer-activity {
+  font-size: 35px;
+  padding-left: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.609);
+}
+
+@keyframes fade {
+  10% {
+    opacity: 0.6;
+    transform: rotate(10deg);
+    transform-origin: 0% 100%;
+  }
+  100% {
+    top: 20%;
+    transform: rotate(45deg);
+    transform-origin: 0% 100%;
+    opacity: 0.1;
+  }
+}
+
+@keyframes alert {
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-40%);
+  transform: translateX(-40%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.6rem 15rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  background-color: #eb4d4b;
+}
+@media screen and (max-width: 864px) {
+  .container-todo {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-list {
+    display: block;
+    width: 98%;
+    height: 300px;
+    overflow: auto;
+  }
+  .create-activity {
+    height: auto;
+    width: 98%;
+    font-size: 35px;
+  }
+  .name-activity {
+    font-size: 35px;
+    padding-left: 20px;
+  }
+  .icons-activity {
+    font-size: 35px;
+  }
+  .timer-activity {
+    font-size: 25px;
+  }
+  input {
+    width: 105px;
+  }
+  button {
+    font-size: 19px;
+    width: 100;
+  }
+}
